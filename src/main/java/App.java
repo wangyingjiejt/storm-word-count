@@ -17,7 +17,7 @@ public class App {
 
         //配置
         Config conf = new Config();
-        conf.put("wordsFile","src/main/resources/words.txt");
+        conf.put("wordsFile","src/main/resources/catalina.out");
         conf.setDebug(true);
 
 
@@ -25,7 +25,7 @@ public class App {
         conf.put(Config.TOPOLOGY_MAX_SPOUT_PENDING,1);
         LocalCluster cluster= new LocalCluster();
         cluster.submitTopology("Getting-start",conf,builder.createTopology());
-        Thread.sleep(10000);
+        Thread.sleep(1000000);
         cluster.shutdown();
     }
 }
